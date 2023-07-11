@@ -1,0 +1,27 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Age Calculator</h1>
+    <div class="field">
+      <label class="label">Date of Birth:</label>
+      <div class="control">
+        <input class="input" type="date" [(ngModel)]="birthdate">
+      </div>
+    </div>
+    <div class="field">
+      <button class="button is-primary" (click)="calculateAge()">Calculate</button>
+    </div>
+    <div class="field">
+      <label class="label">Your Age:</label>
+      <div class="control">
+        <p>{{ age }}</p>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Zodiac Sign:</label>
+      <div class="control">
+        <p>{{ zodiacSign }}</p>
+        <img [src]="zodiacSignImage" alt="Zodiac Sign" *ngIf="zodiacSignImage">
+      </div>
+    </div>
+  </div>
+</section>
